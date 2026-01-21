@@ -1,0 +1,13 @@
+{
+  "name": "feature-b",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "dependencies": {
+    "rn-common-lib": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

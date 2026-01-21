@@ -7,6 +7,7 @@ class MemoryStorage {
     return this.store.has(key) ? this.store.get(key) : null;
   }
 
+  // Store it inside the HASHMAP
   async setItem(key, value) {
     this.store.set(key, value);
   }
