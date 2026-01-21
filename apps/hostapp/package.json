@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "web": "webpack serve --config webpack.config.js"
   },
   "workspaces": {
     "nohoist": [
@@ -25,14 +26,17 @@
     "module-customer": "workspace:*",
     "module-login": "workspace:*",
     "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-native": "0.83.1",
     "react-native-safe-area-context": "^5.6.2",
     "react-native-screens": "^4.20.0",
+    "react-native-web": "^0.21.2",
     "rn-common-lib": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.28.6",
     "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.28.5",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "20.0.0",
     "@react-native-community/cli-platform-android": "20.0.0",
@@ -43,12 +47,19 @@
     "@react-native/typescript-config": "0.83.1",
     "@types/jest": "^29.5.13",
     "@types/react": "^19.2.0",
+    "@types/react-dom": "^19",
+    "@types/react-native-web": "^0",
     "@types/react-test-renderer": "^19.1.0",
+    "babel-loader": "^10.0.0",
     "eslint": "^8.19.0",
+    "html-webpack-plugin": "^5.6.6",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "19.2.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   },
   "engines": {
     "node": ">=20"
