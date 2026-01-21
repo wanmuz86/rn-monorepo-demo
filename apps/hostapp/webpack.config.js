@@ -21,7 +21,13 @@ module.exports = {
   resolve: {
     // check also whatever ended with .web.js and .web.jsx
     extensions: [".web.jsx", ".web.js", ".jsx", ".js", ".json"],
-    alias: { "react-native$": "react-native-web" },
+    alias: {
+      "react-native$": "react-native-web",
+      // Force all packages to use the same React instance (prevents duplicate React error)
+      // Dependencies are hoisted to root node_modules in this monorepo
+      react: path.resolve(__dirname, "../../node_modules/react"),
+      "react-dom": path.resolve(__dirname, "../../node_modules/react-dom"),
+    },
     mainFields: ["browser", "module", "main"],
   },
 
@@ -43,7 +49,7 @@ module.exports = {
           },
         },
       },
-      // image definitiaon
+      // image
       { test: /\.(png|jpg|svg)$/, type: "asset/resource" },
     ],
   },

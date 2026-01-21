@@ -5,7 +5,6 @@ import { eventBus } from "rn-common-lib";
 
 function TabBar({ tabs, active, onSelect }) {
   return (
-    // Use View to manually create the Tab
     <View style={{ flexDirection: "row", padding: 12, borderBottomWidth: 1 }}>
       {tabs.map(t => (
         <Pressable
