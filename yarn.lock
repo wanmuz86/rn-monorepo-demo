@@ -7103,6 +7103,9 @@ __metadata:
   resolution: "module-customer@workspace:packages/module-customer"
   dependencies:
     rn-common-lib: "npm:1.0.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -7111,6 +7114,9 @@ __metadata:
   resolution: "module-login@workspace:packages/module-login"
   dependencies:
     rn-common-lib: "npm:1.0.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -8105,6 +8111,9 @@ __metadata:
 "rn-common-lib@npm:1.0.0, rn-common-lib@workspace:*, rn-common-lib@workspace:packages/rn-common-lib":
   version: 0.0.0-use.local
   resolution: "rn-common-lib@workspace:packages/rn-common-lib"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 

@@ -15,10 +15,13 @@ const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
 
+// The navigation tree that going to be passed as params props to all the Screen
+// DetailScreen({navigation})
 export const navRef = createNavigationContainerRef();
 
 
 function RegistryTabs() {
+    // to hoist / not to refresh when there is a chnage in the tab component
  const tabScreens = useMemo(() => {
    if (!registry || !registry.tabs || !registry.routes) {
      return [];
@@ -70,20 +73,33 @@ function RegistryTabs() {
 
 export function AppNavigator() {
  useEffect(() => {
+
+    // Register to the "NAV:GO" event,
    const off = eventBus.on("NAV:GO", (payload) => {
+
+    // Whenever it is called, 
+    // get the route passed by the Emitter
+    // get the path by the emitter
      const route = payload && payload.route;
      const params = payload && payload.params;
 
 
+     // error handling
      if (!route) return;
+
+     // if the navigation is ready , navigate to the new page based on the route given
      if (navRef.isReady()) navRef.navigate(route, params);
    });
 
-
+// offload - when component is gone // compenent lifecyle
+// componentDidUnmout / before the page go away
+//un subsctibe from the event
    return off;
  }, []);
 
 
+ // if registry is not there or registry.routes is empty
+ // create a placeholder
  if (!registry || !registry.routes) {
    // Return a minimal navigator if registry is not available
    const PlaceholderScreen = () => null;
@@ -104,13 +120,14 @@ export function AppNavigator() {
  return (
    <NavigationContainer ref={navRef}>
      <Stack.Navigator>
+        {/* Create the Tab first */}
        <Stack.Screen
          name="HomeTabs"
          component={RegistryTabs}
          options={{ headerShown: false }}
        />
 
-
+{/* We create the stacks and the Screen based on what is defined registry.routes */}
        {registry.routes && registry.routes.map((r) => (
          <Stack.Screen
            key={r.name}
