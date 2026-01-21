@@ -1,4 +1,4 @@
-import { getCombinedRegistry } from "../apps/hostapp/src/registry/getCombinedRegistry.js";
+import { getCombinedRegistry } from "../apps/old-hostapp/src/registry/getCombinedRegistry.js";
 
 // Run the getCombined Registry method
 const registry = getCombinedRegistry();

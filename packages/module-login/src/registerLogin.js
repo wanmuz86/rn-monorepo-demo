@@ -1,5 +1,5 @@
 import { addRoute, addTab } from "rn-common-lib";
-import { LoginScreen } from "./screens/LoginScreen.js";
+import { LoginScreen } from "./screens/LoginScreen.jsx";
 
 // Register the Route name for the module
 export const LoginRoutes = { LOGIN: "Login" };

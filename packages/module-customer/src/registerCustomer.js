@@ -1,6 +1,6 @@
 import { addRoute, addTab } from "rn-common-lib";
-import { CustomerListScreen } from "./screens/CustomerListScreen.js";
-import { CustomerDetailScreen } from "./screens/CustomerDetailScreen.js";
+import { CustomerListScreen } from "./screens/CustomerListScreen.jsx";
+import { CustomerDetailScreen } from "./screens/CustomerDetailScreen.jsx";
 
 // Screens within the module
 // Arranged based on Flow of stack , will be used by navigation in Host App to creat the stack
