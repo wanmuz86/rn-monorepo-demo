@@ -1,0 +1,11 @@
+{
+ "name": "hostapp",
+ "version": "1.0.0",
+ "private": true,
+ "type": "module",
+ "dependencies": {
+  "module-customer": "workspace:*",
+  "module-login": "workspace:*",
+  "rn-common-lib": "workspace:*"
+ }
+}

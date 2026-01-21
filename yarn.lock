@@ -2665,6 +2665,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hostapp@workspace:apps/hostapp":
+  version: 0.0.0-use.local
+  resolution: "hostapp@workspace:apps/hostapp"
+  dependencies:
+    module-customer: "workspace:*"
+    module-login: "workspace:*"
+    rn-common-lib: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "html-escaper@npm:^2.0.0":
   version: 2.0.2
   resolution: "html-escaper@npm:2.0.2"
@@ -3628,6 +3638,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"module-customer@workspace:*, module-customer@workspace:packages/module-customer":
+  version: 0.0.0-use.local
+  resolution: "module-customer@workspace:packages/module-customer"
+  dependencies:
+    rn-common-lib: "npm:1.0.0"
+  languageName: unknown
+  linkType: soft
+
+"module-login@workspace:*, module-login@workspace:packages/module-login":
+  version: 0.0.0-use.local
+  resolution: "module-login@workspace:packages/module-login"
+  dependencies:
+    rn-common-lib: "npm:1.0.0"
+  languageName: unknown
+  linkType: soft
+
 "ms@npm:^2.1.3":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
@@ -4019,7 +4045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rn-common-lib@workspace:*, rn-common-lib@workspace:packages/rn-common-lib":
+"rn-common-lib@npm:1.0.0, rn-common-lib@workspace:*, rn-common-lib@workspace:packages/rn-common-lib":
   version: 0.0.0-use.local
   resolution: "rn-common-lib@workspace:packages/rn-common-lib"
   languageName: unknown
