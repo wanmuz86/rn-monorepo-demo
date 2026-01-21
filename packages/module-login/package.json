@@ -1,0 +1,11 @@
+{
+  "name": "module-login",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "rn-common-lib": "1.0.0"
+  }
+}

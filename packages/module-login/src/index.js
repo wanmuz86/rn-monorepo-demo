@@ -1,0 +1,1 @@
+export { registerLogin } from "./registerLogin.js";

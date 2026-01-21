@@ -1,0 +1,12 @@
+{
+  "name": "module-customer",
+  "private": true,
+  "type": "module",
+ "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "rn-common-lib": "1.0.0"
+  }
+}
